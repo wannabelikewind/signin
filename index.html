@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The signup form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5 p-0 leftdiv">
+                <div class="col-12 left-inner">
+                    <div class="row">
+                        <div class="col-3 offset-1"><img src="./moon.png" alt="moon" height="150px" width="150px"></div>
+                        <div class="col ps-3 name">CRESCENT</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col rightdiv">
+                <div class="row right-inner-top mt-5">
+                    <div class="col matter" ><pre style="font-family: 'Just Another Hand', cursive;">       Let the magical night sky with beautiful music be your backdrop. Make the moon and stars 
+  your friends because they know your secrets.
+       You <i>know</i> you want to</pre>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col signbox" style="margin-top: 4rem;font-family: 'Just Another Hand', cursive;padding-top: 1.5rem;padding-bottom:2rem;font-size: 1.5rem;">
+                    <form novalidate>
+                        <div class="row">
+                        <div class="col form-floating">
+                            <input type="text" class="form-control" style="font-size: 1.5rem;background-color: transparent;" id="first_name" placeholder="Your First Name" required>
+                            <label for="first_name" class="form-label">FIRST NAME</label>
+                        </div>
+                        <div class="col form-floating">
+                            <input type="text" class="form-control" style="font-size: 1.5rem;background-color: transparent;" id="last_name" placeholder="lastname" required>
+                            <label for="last_name" class="form-label">LAST NAME</label>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col form-floating">
+                                <input type="email" class="form-control" style="font-size: 1.5rem; margin-top:4vh;background-color: transparent;" id="user_email" placeholder="email" required>
+                                <label for="user_email" class="form-label" style="margin-top: 4vh;">EMAIL</label>
+                                <div class="invalid-feedback">Invalid Email</div>
+                                <div class="valid-feedback">Correct Email</div>
+                            </div>
+                            <div class="col form-floating">
+                                <input type="text" class="form-control" style="font-size: 1.5rem; margin-top: 4vh;background-color: transparent;" id="user_no" placeholder="phoneno" required>
+                                <label for="user_no" class="form-label" style="margin-top: 4vh;">PHONE NUMBER</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col form-floating">
+                                <input type="password" class="form-control" style="font-size: 1.5rem; margin-top: 4vh;background-color: transparent;" id="pass" placeholder="pass" required>
+                                <label for="pass" class="form-label" style="margin-top: 4vh;">PASSWORD</label>
+                            </div>
+                            <div class="col form-floating">
+                                <input type="password" class="form-control" style="font-size: 1.5rem;margin-top: 4vh;background-color: transparent;" id="cpass" placeholder="cpass" required>
+                                <label for="cpass" class="form-label" style="margin-top: 4vh;">CONFIRM PASSWORD</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-4">
+                        <button class="btn btn-outline-dark btn-lg" style="font-family: 'Just Another Hand', cursive;font-size: 2.5rem;">Submit</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="margin-top:4vh;font-family: 'Just Another Hand', cursive;font-size: 2rem;">ALREADY HAVE AN ACCOUNT ?&nbsp&nbsp&nbsp&nbsp<a href="#" style="color: white;">Log in</a></div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const form = document.querySelector('form')
+        form.addEventListener('submit',e =>{
+            if(!form.checkValidity()){
+                e.preventDefault()
+            }
+            form.classList.add('was-validated')
+        })
+    </script>
+</body>
+</html>
